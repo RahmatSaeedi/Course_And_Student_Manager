@@ -26,7 +26,7 @@
   </Table>
   <Table Name="dbo.ClientLecture" Member="ClientLectures">
     <Type Name="ClientLecture">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" AutoSync="Never" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="ClientId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="LectureId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="Client_ClientLecture" Member="Client" ThisKey="ClientId" OtherKey="Id" Type="Client" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />

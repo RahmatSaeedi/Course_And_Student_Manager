@@ -14,7 +14,7 @@
         <elementListCompartment Id="f7ad0b74-95fd-4f27-9612-f500abf2701d" absoluteBounds="4.515, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(7.25 : 2.47199625651042); (6.5 : 2.47199625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(7.25 : 2.47199625651042); (6.5 : 2.47199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/Linq2SqlDataClassesDataContext/Company/Company_Client" />
       <nodes>
         <classShapeMoniker Id="55e9f9a1-a98f-42de-ae6d-cb171032ec1d" />
@@ -30,7 +30,7 @@
     <classShape Id="c4a93d1a-de0d-46d3-9df6-6bc2b6e778f5" absoluteBounds="1.125, 1.875, 2, 1.3862939453125">
       <DataClassMoniker Name="/Linq2SqlDataClassesDataContext/ClientLecture" />
       <nestedChildShapes>
-        <elementListCompartment Id="379bd3e1-f6a1-4921-90e3-831f06181a59" absoluteBounds="1.1400000000000001, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="379bd3e1-f6a1-4921-90e3-831f06181a59" absoluteBounds="1.14, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <associationConnector edgePoints="[(4.5 : 2.56814697265625); (3.125 : 2.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">

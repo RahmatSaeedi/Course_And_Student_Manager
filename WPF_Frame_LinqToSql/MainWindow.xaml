@@ -21,6 +21,9 @@
         <DataTemplate x:Name="clientsViewModel" DataType="{x:Type viewmodels:ClientsViewModel}">
             <views:ClientsView DataContext="{Binding}"/>
         </DataTemplate>
+        <DataTemplate x:Name="lecturesViewModel" DataType="{x:Type viewmodels:LecturesViewModel}">
+            <views:LectureView DataContext="{Binding}"></views:LectureView>
+        </DataTemplate>
     </Window.Resources>
     <Grid SnapsToDevicePixels="True">
         <Grid.ColumnDefinitions>
@@ -45,6 +48,7 @@
             <Button x:Name="btnHome" Content="Home" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnHome_Click" />
             <Button x:Name="btnCompanies" Content="Companies" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnCompanies_Click" />
             <Button x:Name="btnClients" Content="Students" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnClients_Click" />
+            <Button x:Name="btnLectures" Content="Lectures" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnLectures_Click" />
         </StackPanel>
         <ContentControl Grid.Row="1" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="5" Content="{Binding}"></ContentControl>
     </Grid>

@@ -5,19 +5,40 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_Frame_LinqToSql.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="675">
+             d:DesignHeight="450" d:DesignWidth="750">
     <StackPanel  Background="#FFF5FAF5" Margin="10">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <TextBox x:Name="tbFirstName" VerticalAlignment="Center" BorderBrush="DarkGray" Width="150" Padding="2" Margin="25,0,5,0" Text="First Name" TextAlignment="Center" FontSize="16" GotFocus="tbFirstName_GotFocus" />
-                <TextBox x:Name="tbLastName" VerticalAlignment="Center" BorderBrush="DarkGray" Width="150" Padding="2" Margin="25,0,5,0" Text="Last Name" TextAlignment="Center" FontSize="16" GotFocus="tbLastName_GotFocus" LostFocus="tbLastName_LostFocus" />
-                <ComboBox x:Name="comboBox" ></ComboBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-                <Button x:Name="btnAddClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Top" >Add</Button>
-                <Button x:Name="btnUpdateClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" >Update</Button>
-                <Button x:Name="btnDeleteClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" >Remove</Button>
-                <Button x:Name="btnRefreshClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" >Refresh</Button>
-            </StackPanel>
-        <DataGrid x:Name="mainDataGrid" Margin="0,10,0,0" BorderBrush="#FFF5FAF5" BorderThickness="0" GridLinesVisibility="None" Background="#FFF5FAF5" FontSize="14" FontFamily="Segoe UI Semibold" AlternatingRowBackground="#FFF0F5F0" RowBackground="#FFF5FAF5" IsReadOnly="True" SelectedValuePath="Id" />
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <TextBox x:Name="tbFirstName" VerticalAlignment="Center" BorderBrush="DarkGray" Width="150" Padding="2" Margin="25,0,5,0" Text="First Name" TextAlignment="Center" FontSize="16" GotFocus="tbFirstName_GotFocus" LostFocus="tbFirstName_LostFocus"  />
+            <TextBox x:Name="tbLastName" VerticalAlignment="Center" BorderBrush="DarkGray" Width="150" Padding="2" Margin="25,0,5,0" Text="Last Name" TextAlignment="Center" FontSize="16" GotFocus="tbLastName_GotFocus" LostFocus="tbLastName_LostFocus" />
+            <Grid>
+                <ComboBox x:Name="cbCompanies" ItemsSource="{Binding}" VerticalAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Stretch" DisplayMemberPath="Name" SelectedValuePath="Id" SelectionChanged="cbCompanies_SelectionChanged"/>
+                <TextBlock Text="Companies" IsHitTestVisible="False" Padding="10,0,25,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=cbCompanies,Path=SelectedItem}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Visible"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button x:Name="btnAddClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Top" Click="btnAddClient_Click" >Add</Button>
+            <Button x:Name="btnUpdateClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnUpdateClient_Click" >Update</Button>
+            <Button x:Name="btnDeleteClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnDeleteClient_Click" >Remove</Button>
+            <Button x:Name="btnRefreshClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnRefreshClient_Click" >Refresh</Button>
+        </StackPanel>
+        <DataGrid x:Name="mainDataGrid" Margin="0,10,0,0" BorderBrush="#FFF5FAF5" BorderThickness="0" GridLinesVisibility="None" Background="#FFF5FAF5" FontSize="14" FontFamily="Segoe UI Semibold" AlternatingRowBackground="#FFF0F5F0" RowBackground="#FFF5FAF5" IsReadOnly="True" SelectedValuePath="Id" SelectionChanged="mainDataGrid_SelectionChanged" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Student ID" Binding="{Binding Id}" />
+                <DataGridTextColumn Header="First Name" Binding="{Binding FirstName}" />
+                <DataGridTextColumn Header="Last Name" Binding="{Binding LastName}" />
+                <DataGridTextColumn Header="Business ID" Binding="{Binding CompanyId}" />
+            </DataGrid.Columns>
+        </DataGrid>
     </StackPanel>
 </UserControl>

@@ -26,6 +26,7 @@ namespace WPF_Frame_LinqToSql
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new LecturesViewModel();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -46,6 +47,11 @@ namespace WPF_Frame_LinqToSql
         private void btnClients_Click(object sender, RoutedEventArgs e)
         {
             DataContext = new ClientsViewModel();
+        }
+
+        private void btnLectures_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new LecturesViewModel();
         }
     }
 }

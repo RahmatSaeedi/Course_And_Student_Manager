@@ -48,7 +48,13 @@ namespace WPF_Frame_LinqToSql.Views
         {
             if (tbCompanyName.Text == "")
             {
-                tbCompanyName.Text = "Company Name";
+                if(mainDataGrid.SelectedItem != null)
+                {
+                    tbCompanyName.Text = ((Company)mainDataGrid.SelectedItem).Name;
+                } else
+                {
+                    tbCompanyName.Text = "Company Name";
+                }
             }
         }
 
@@ -76,17 +82,23 @@ namespace WPF_Frame_LinqToSql.Views
             if (mainDataGrid.SelectedItem != null)
             {
                 tbCompanyName.Text = ((Company)mainDataGrid.SelectedItem).Name;
+            } else
+            {
+                tbCompanyName.Text = "Company Name";
             }
 
         }
 
         private void btnUpdateCompany_Click(object sender, RoutedEventArgs e)
         {
-            if(((Company)mainDataGrid.SelectedItem).Name != tbCompanyName.Text && tbCompanyName.Text != null && tbCompanyName.Text != "")
+            if(mainDataGrid.SelectedItem != null)
             {
-                IQueryable<Company> company = from c in dataContext.Companies where c.Id == (int)mainDataGrid.SelectedValue select c;
-                company.First().Name = tbCompanyName.Text;
+                Company company = (Company) mainDataGrid.SelectedItem;
+                company.Name = tbCompanyName.Text;
                 dataContext.SubmitChanges();
+            } else
+            {
+                MessageBox.Show("Please select a company to update first.");
             }
         }
 

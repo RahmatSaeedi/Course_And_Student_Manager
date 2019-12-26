@@ -70,6 +70,7 @@
     <Compile Include="ViewModels\ClientsViewModel.cs" />
     <Compile Include="ViewModels\CompaniesViewModel.cs" />
     <Compile Include="ViewModels\HomeViewModel.cs" />
+    <Compile Include="ViewModels\LecturesViewModel.cs" />
     <Compile Include="Views\ClientsView.xaml.cs">
       <DependentUpon>ClientsView.xaml</DependentUpon>
     </Compile>
@@ -78,6 +79,9 @@
     </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LectureView.xaml.cs">
+      <DependentUpon>LectureView.xaml</DependentUpon>
     </Compile>
     <Compile Include="visualStudio2019DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -105,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LectureView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_Frame_LinqToSql.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="675">
+             d:DesignHeight="450" d:DesignWidth="750">
     <Grid Background="#FFF5FAF5">
             
     </Grid>
