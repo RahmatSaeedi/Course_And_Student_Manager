@@ -14,10 +14,10 @@
             </Grid.ColumnDefinitions>
             <TextBox x:Name="tbCompanyName" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="DarkGray" Width="150" Padding="2" Margin="25,0,5,0" Text="Company Name" TextAlignment="Center" FontSize="16" GotFocus="tbCompanyName_GotFocus" LostFocus="tbCompanyName_LostFocus"/>
             <StackPanel  Grid.Column="1" Orientation="Horizontal">
-                <Button x:Name="btnAddCompany" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Top" Click="btnAddCompany_Click" >Add</Button>
-                <Button x:Name="btnUpdateCompany" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnUpdateCompany_Click" >Update</Button>
-                <Button x:Name="btnDeleteCompany" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnDeleteCompany_Click" >Remove</Button>
-                <Button x:Name="btnRefreshCompany" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnRefreshCompany_Click" >Refresh</Button>
+                <Button x:Name="btnAddCompany" Style="{StaticResource ButtonTemplate}" Click="btnAddCompany_Click" >Add</Button>
+                <Button x:Name="btnUpdateCompany" Style="{StaticResource ButtonTemplate}" Click="btnUpdateCompany_Click" >Update</Button>
+                <Button x:Name="btnDeleteCompany" Style="{StaticResource ButtonTemplate}" Click="btnDeleteCompany_Click" >Remove</Button>
+                <Button x:Name="btnRefreshCompany" Style="{StaticResource ButtonTemplate}" Click="btnRefreshCompany_Click" >Refresh</Button>
             </StackPanel>
         </Grid>
         <StackPanel Orientation="Horizontal">

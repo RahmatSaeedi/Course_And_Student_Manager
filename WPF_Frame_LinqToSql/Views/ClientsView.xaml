@@ -27,10 +27,10 @@
             </Grid>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
-            <Button x:Name="btnAddClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Top" Click="btnAddClient_Click" >Add</Button>
-            <Button x:Name="btnUpdateClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnUpdateClient_Click" >Update</Button>
-            <Button x:Name="btnDeleteClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnDeleteClient_Click" >Remove</Button>
-            <Button x:Name="btnRefreshClient" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="16" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Click="btnRefreshClient_Click" >Refresh</Button>
+            <Button x:Name="btnAddClient" Style="{StaticResource ButtonTemplate}"  Click="btnAddClient_Click" >Add</Button>
+            <Button x:Name="btnUpdateClient" Style="{StaticResource ButtonTemplate}" Click="btnUpdateClient_Click" >Update</Button>
+            <Button x:Name="btnDeleteClient" Style="{StaticResource ButtonTemplate}" Click="btnDeleteClient_Click" >Remove</Button>
+            <Button x:Name="btnRefreshClient" Style="{StaticResource ButtonTemplate}" Click="btnRefreshClient_Click" >Refresh</Button>
         </StackPanel>
         <DataGrid x:Name="mainDataGrid" Margin="0,10,0,0" BorderBrush="#FFF5FAF5" BorderThickness="0" GridLinesVisibility="None" Background="#FFF5FAF5" FontSize="14" FontFamily="Segoe UI Semibold" AlternatingRowBackground="#FFF0F5F0" RowBackground="#FFF5FAF5" IsReadOnly="True" SelectedValuePath="Id" SelectionChanged="mainDataGrid_SelectionChanged" AutoGenerateColumns="False">
             <DataGrid.Columns>

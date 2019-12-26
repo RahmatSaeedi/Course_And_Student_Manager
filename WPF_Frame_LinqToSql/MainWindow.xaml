@@ -45,10 +45,11 @@
             <Button x:Name="btnClose" Content="X" Background="Red" Foreground="White" Height="25" Width="25" Click="btnClose_Click" />
         </StackPanel>
         <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="6" Margin="10,10,0,0" HorizontalAlignment="Stretch"  VerticalAlignment="Top">
-            <Button x:Name="btnHome" Content="Home" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnHome_Click" />
-            <Button x:Name="btnCompanies" Content="Companies" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnCompanies_Click" />
-            <Button x:Name="btnClients" Content="Students" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnClients_Click" />
-            <Button x:Name="btnLectures" Content="Lectures" Padding="0,10,0,10" Background="#FFF5FAF5" BorderBrush="#FF359735" FontSize="14" FontFamily="Segoe UI Symbol" FontWeight="Bold" Click="btnLectures_Click" />
+            <Button x:Name="btnHome" Content="Home" Style="{StaticResource NavigationButtonTemplate}" Click="btnHome_Click" />
+            <Button x:Name="btnCompanies" Content="Companies" Style="{StaticResource NavigationButtonTemplate}" Click="btnCompanies_Click" />
+            <Button x:Name="btnClients" Content="Students" Style="{StaticResource NavigationButtonTemplate}" Click="btnClients_Click" />
+            <Button x:Name="btnLectures" Content="Lectures" Style="{StaticResource NavigationButtonTemplate}" Click="btnLectures_Click" />
+            <Button Style="{StaticResource NavigationButtonTemplate}" />
         </StackPanel>
         <ContentControl Grid.Row="1" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="5" Content="{Binding}"></ContentControl>
     </Grid>

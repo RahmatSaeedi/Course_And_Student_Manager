@@ -10,20 +10,20 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBox Grid.Column="0" x:Name="tbLectureName" HorizontalAlignment="Left" VerticalAlignment="Center" BorderBrush="DarkGray" Width="150" Padding="2" Margin="25,0,5,0" Text="Lecture Name" TextAlignment="Center" FontSize="16" GotFocus="tbLectureName_GotFocus" LostFocus="tbLectureName_LostFocus"></TextBox>
 
             <StackPanel Grid.Column="1" HorizontalAlignment="Center" Orientation="Horizontal">
-                <Button x:Name="btnAddLecture" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="14" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Top" Click="btnAddLecture_Click" >Add</Button>
-                <Button x:Name="btnUpdateLecture" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="14" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Center" Click="btnUpdateLecture_Click" >Update</Button>
-                <Button x:Name="btnDeleteLecture" Padding="2" Margin="15,0,15,0" Width="75" FontWeight="Bold" FontSize="14" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" VerticalAlignment="Center" Click="btnDeleteLecture_Click" >Remove</Button>
+                <Button x:Name="btnAddLecture" Style="{StaticResource ButtonTemplate}" Click="btnAddLecture_Click" >Add</Button>
+                <Button x:Name="btnUpdateLecture" Style="{StaticResource ButtonTemplate}" Click="btnUpdateLecture_Click" >Update</Button>
+                <Button x:Name="btnDeleteLecture" Style="{StaticResource ButtonTemplate}" Click="btnDeleteLecture_Click" >Remove</Button>
             </StackPanel>
         </Grid>
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="5*"></ColumnDefinition>
-                <ColumnDefinition Width="6*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="25,10,10,10" Grid.Column="0">
                 <Grid>
@@ -56,7 +56,8 @@
                 </Grid>
                 <Label Content="⟷" FontSize="20" FontWeight="Bold"></Label>
                 <Grid>
-                    <ComboBox x:Name="cbLecture" VerticalContentAlignment="Center" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" SelectionChanged="cbStudent_cbLecture_SelectionChanged" />
+                    <ComboBox x:Name="cbLecture" VerticalContentAlignment="Center" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" SelectionChanged="cbStudent_cbLecture_SelectionChanged" >
+                    </ComboBox>
                     <TextBlock Text="Lecture" Padding="10,0,25,0" VerticalAlignment="Center" IsHitTestVisible="False">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
@@ -72,9 +73,9 @@
                 </Grid>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Grid.Column="1">
-                <Button x:Name="btnRegisterClient" Padding="2" Margin="12,0,15,0"  FontWeight="Bold" FontSize="14" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" Width="75" VerticalAlignment="Center" Click="btnRegisterClient_Click" >Register</Button>
-                <Button x:Name="btnUnregisterClient" Padding="2" Margin="15,0,15,0" FontWeight="Bold" FontSize="14" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" Width="90" VerticalAlignment="Center" Click="btnUnregisterClient_Click" >Unregister</Button>
-                <Button x:Name="btnResetClient" Padding="2" Margin="0,0,15,0" FontWeight="Bold" FontSize="14" Background="WhiteSmoke" BorderBrush="DarkGray" Foreground="Black" FontFamily="Consolas" Height="27" Width="75" VerticalAlignment="Center" Click="btnResetClient_Click"  >Reset</Button>
+                <Button x:Name="btnRegisterClient" Style="{StaticResource ButtonTemplate}" Margin="25,0,0,0" Click="btnRegisterClient_Click" >Register</Button>
+                <Button x:Name="btnUnregisterClient" Style="{StaticResource ButtonTemplate}" Margin="30,0,10,0" Width="90" Click="btnUnregisterClient_Click" >Unregister</Button>
+                <Button x:Name="btnResetClient" Style="{StaticResource ButtonTemplate}" Click="btnResetClient_Click"  >Reset</Button>
             </StackPanel>
         </Grid>
         <Grid>
