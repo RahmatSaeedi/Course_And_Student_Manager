@@ -22,7 +22,10 @@
             <views:ClientsView DataContext="{Binding}"/>
         </DataTemplate>
         <DataTemplate x:Name="lecturesViewModel" DataType="{x:Type viewmodels:LecturesViewModel}">
-            <views:LectureView DataContext="{Binding}"></views:LectureView>
+            <views:LectureView DataContext="{Binding}"/>
+        </DataTemplate>
+        <DataTemplate x:Name="questionsViewModel" DataType="{x:Type viewmodels:QuestionsViewModel}">
+            <views:QuestionsView DataContext="{Binding}"/>
         </DataTemplate>
     </Window.Resources>
     <Grid SnapsToDevicePixels="True">
@@ -49,9 +52,9 @@
             <Button x:Name="btnCompanies" Content="Companies" Style="{StaticResource NavigationButtonTemplate}" Click="btnCompanies_Click" />
             <Button x:Name="btnClients" Content="Students" Style="{StaticResource NavigationButtonTemplate}" Click="btnClients_Click" />
             <Button x:Name="btnLectures" Content="Lectures" Style="{StaticResource NavigationButtonTemplate}" Click="btnLectures_Click" />
-            <Button Style="{StaticResource NavigationButtonTemplate}" />
+            <Button x:Name="btnQuestions" Content="Print" Style="{StaticResource NavigationButtonTemplate}" Click="btnQuestions_Click"  />
         </StackPanel>
-        <ContentControl Grid.Row="1" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="5" Content="{Binding}"></ContentControl>
+        <ContentControl Grid.Row="1" Grid.Column="1" Grid.RowSpan="5" Grid.ColumnSpan="5" Content="{Binding}"/>
     </Grid>
 
 </Window>

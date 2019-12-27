@@ -56,8 +56,7 @@
                 </Grid>
                 <Label Content="⟷" FontSize="20" FontWeight="Bold"></Label>
                 <Grid>
-                    <ComboBox x:Name="cbLecture" VerticalContentAlignment="Center" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" SelectionChanged="cbStudent_cbLecture_SelectionChanged" >
-                    </ComboBox>
+                    <ComboBox x:Name="cbLecture" VerticalContentAlignment="Center" ItemsSource="{Binding}" SelectedValuePath="Id" DisplayMemberPath="Name" SelectionChanged="cbStudent_cbLecture_SelectionChanged" />
                     <TextBlock Text="Lecture" Padding="10,0,25,0" VerticalAlignment="Center" IsHitTestVisible="False">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
