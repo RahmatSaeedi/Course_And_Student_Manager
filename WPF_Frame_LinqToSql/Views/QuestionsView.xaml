@@ -9,12 +9,12 @@
     <StackPanel  Background="#FFF5FAF5" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
         <TextBox x:Name="tbFileName" Height="26" TextWrapping="Wrap" Text="File Name" Width="150" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Padding="3" GotFocus="tbFileName_GotFocus" LostFocus="tbFileName_LostFocus"/>
         <StackPanel Orientation="Horizontal" Margin="10">
-            <Button x:Name="btnStudents" Style="{StaticResource ButtonTemplate}" Width="105" Content="Students" Click="btnStudents_Click"/>
-            <Button x:Name="btnCompanies" Style="{StaticResource ButtonTemplate}" Width="105" Content="Companies"/>
+            <Button x:Name="btnStudents" Style="{StaticResource ButtonTemplate}" Width="115" Content="Students" Click="btnStudents_Click"/>
+            <Button x:Name="btnCompanies" Style="{StaticResource ButtonTemplate}" Width="115" Content="Companies" Click="btnCompanies_Click"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal"  Margin="10">
-            <Button x:Name="btnLectures" Style="{StaticResource ButtonTemplate}" Width="105" Content="Lectures"/>
-            <Button x:Name="btnAll" Style="{StaticResource ButtonTemplate}" Width="105" Content="All"/>
+            <Button x:Name="btnLectures" Style="{StaticResource ButtonTemplate}" Width="115" Content="Lectures" Click="btnLectures_Click"/>
+            <Button x:Name="btnRegistrations" Style="{StaticResource ButtonTemplate}" Width="115" Content="Registrations" Click="btnRegistrations_Click"/>
         </StackPanel>
     </StackPanel>
 </UserControl>
